@@ -1,0 +1,100 @@
+/* CUSTOM-PROPS */
+:root {
+    --midnight-green:  hsl(186°, 98%, 17%);
+    --light-coral:  hsl(0°, 87%, 73%);
+    --full-white: hsl(0, 0%, 100%);
+    --light-white:  hsla(0, 0%, 100%, 0.6);
+    --rapture-blue:  hsl(179°, 42%, 63%);
+    --sacramento-green: hsl(186°, 96%, 10%);
+    --deep-green: hsl(186°, 100%, 14%);
+    --dark-green: hsl(186°, 100%, 8%);
+}
+
+/* FONT */
+@font-face {
+    font-family: "Livvic";
+    src: url("../font/Livvic-Bold.woff2") format("woff2"),
+        url("../font/Livvic-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Livvic";
+    src: url("../font/Livvic-SemiBold.woff2") format("woff2"),
+        url("../font/Livvic-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Livvic";
+    src: url("../font/Livvic-Medium.woff2") format("woff2"),
+        url("../font/Livvic-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* GLOBAL */
+html {
+    height: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Livvic", "Arial", sans-serif;
+    background-color: var(--midnight-green);
+    color: var(--full-white);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTON */
+.button {
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 32px;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    border-radius: 24px;
+    display: inline-block;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MAIN-CONTENT */
+.main-content {
+    flex-grow: 1;
+}
