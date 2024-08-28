@@ -4,23 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-
+    
     <!-- CSS-LINKS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-    <!-- SITE-HEADER -->
-    <header class="site-header"></header>
-
-    <!-- SITE-MAIN -->
-    <main class="main-content"></main>
-
-    <!-- SITE-FOOTER -->
-    <footer class="site-footer"></footer>
-
-    <!-- JS-LINKS -->
-    <script src="app.js"></script>
-</body>
-</html>
+    
+    <!-- SITE-HEADER-HERO -->
+    <div class="container">
+        <div class="site-header-hero">
+            <!-- SITE-HEADER -->
+            <header class="site-header">
+                <!-- LOGO -->
+                <a class="logo" href="index.html">
+                    <img class="logo__img" src="img/logo.svg" alt="Site logo" width="160" height="40">
+                </a>
+                <!-- SITE-HEADER-INNER -->
+                <div class="site-header__inner">
+                    <div class="site-header__menu">
+                        <!-- SITENAV -->
+                        <nav class="sitenav">
+                            <ul class="sitenav__list">
+                                <li class="sitenav__item">
+                                    <a class="sitenav__link" href="#">home</a>
+                                </li>
+                                <li class="sitenav__item">
+                                    <a class="sitenav__link" href="#">about</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- BUTTON -->
+                        <a class="button site-header__button" href="#">contact us</a>
+                    </div>
+                    <!-- CLOSE-ICON -->
+                    <svg class="close-icon js-close-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#fff" fill-rule="evenodd" d="M9 6.379 2.99.369.867 2.488l6.01 6.01-6.01 6.011 2.121 2.122L9 10.622l6.011 6.01 2.122-2.122-6.01-6.01 6.01-6.01L15.01.367 9 6.378Z" clip-rule="evenodd"/></svg>
+                </div>
+                <!-- HAMBURGER-MENU -->
+                <svg class="hamburger-menu js-hamburger-menu" xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="none"><path fill="#fff" d="M0 0h20v3H0zM0 7h20v3H0zM0 14h20v3H0z"/></svg>
+            </header>
+            <!-- SITE-HERO -->
+            <section class="hero">
+                <h1 class="hero__heading">Find the best <span>talent</span></h1>
+                    <div class="hero__text">
+                        <div class="hero__line"></div>
+                        <p class="hero__paragraph">Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.</p>
+                    </div>
+            </section>
+            <!-- HERO-BG -->
+                <img class="hero-left-bg" src="img/site-bg/home-hero-one.svg" alt="" width="200" height="200">
+                <img class="hero-bottom-bg" src="img/site-bg/home-hero-two.svg" alt="" width="358" height="200">
+        </div>
+    </div>
+        
+        <!-- SITE-MAIN -->
+        <main class="main-content"></main>
+        
+        <!-- SITE-FOOTER -->
+        <footer class="site-footer"></footer>
+        
+        <!-- JS-LINKS -->
+        <script src="app.js"></script>
+    </body>
+    </html>

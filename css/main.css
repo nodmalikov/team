@@ -1,20 +1,21 @@
 /* CUSTOM-PROPS */
 :root {
-    --midnight-green:  hsl(186°, 98%, 17%);
-    --light-coral:  hsl(0°, 87%, 73%);
-    --full-white: hsl(0, 0%, 100%);
-    --light-white:  hsla(0, 0%, 100%, 0.6);
-    --rapture-blue:  hsl(179°, 42%, 63%);
-    --sacramento-green: hsl(186°, 96%, 10%);
-    --deep-green: hsl(186°, 100%, 14%);
-    --dark-green: hsl(186°, 100%, 8%);
+    --midnight-green: #014E56;
+    --light-coral: #F67E7E;
+    --full-white: #FFFFFF;
+    --light-white: rgba(255, 255, 255, 0.6);
+    --rapture-blue: #79C8C7;
+    --sacramento-green: #012F34;
+    --police-blue: #2C6269;
+    --deep-green: #004047;
+    --dark-green: #002529;
 }
 
 /* FONT */
 @font-face {
     font-family: "Livvic";
     src: url("../font/Livvic-Bold.woff2") format("woff2"),
-        url("../font/Livvic-Bold.woff") format("woff");
+    url("../font/Livvic-Bold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -23,7 +24,7 @@
 @font-face {
     font-family: "Livvic";
     src: url("../font/Livvic-SemiBold.woff2") format("woff2"),
-        url("../font/Livvic-SemiBold.woff") format("woff");
+    url("../font/Livvic-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -32,7 +33,7 @@
 @font-face {
     font-family: "Livvic";
     src: url("../font/Livvic-Medium.woff2") format("woff2"),
-        url("../font/Livvic-Medium.woff") format("woff");
+    url("../font/Livvic-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -97,4 +98,273 @@ img {
 /* MAIN-CONTENT */
 .main-content {
     flex-grow: 1;
+}
+
+
+/* HEADER-HERO */
+.site-header-hero {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--midnight-green);
+    position: relative;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    padding-top: 73px;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    flex-shrink: 0;
+    text-decoration: none;
+    margin-right: 80px;
+}
+
+.logo__img {
+    width: 160px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.site-header__inner {
+    flex-grow: 1;
+}
+
+.site-header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-icon,
+.hamburger-menu {
+    display: none;
+}
+
+/* SITENAV */
+.sitenav__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sitenav__link {
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    color: var(--full-white);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.sitenav__link:hover {
+    color: var(--light-coral);
+}
+
+.sitenav__link:active {
+    opacity: 0.8;
+}
+
+.site-header__button {
+    border-color: var(--full-white);
+    color: var(--full-white);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.site-header__button:hover {
+    background-color: var(--full-white);
+    color: var(--dark-green);
+}
+
+.site-header__button:active {
+    opacity: 0.8;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding-top: 130px;
+    padding-bottom: 250px;
+}
+
+.hero__heading {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+    color: var(--full-white);
+    max-width: 620px;
+    margin: 0;
+    span {
+        color: var(--light-coral);
+    }
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.hero__line {
+    width: 50px;
+    height: 4px;
+    background-color: var(--rapture-blue);
+}
+
+.hero__paragraph {
+    max-width: 445px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+}
+
+/* HERO-BG */
+.hero-left-bg {
+    position: absolute;
+    top: 250px;
+    left: -265px;
+}
+
+.hero-bottom-bg {
+    position: absolute;
+    top: 600px;
+    left: 752px;
+}
+
+/* MEDIA-QUERIES */
+@media only screen and (max-width: 1200px) {
+    .hero-bottom-bg {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .site-header {
+        padding-top: 64px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        padding-top: 112px;
+        padding-bottom: 256px;
+    }
+    
+    .hero__heading {
+        text-align: center;
+        font-size: 64px;
+        line-height: 56px;
+        max-width: 397px;
+    }
+    
+    .hero__line {
+        display: none;
+        gap: 24px;
+    }
+    
+    .hero__paragraph {
+        text-align: center;
+        max-width: 457px;
+        font-size: 15px;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .site-header {
+        justify-content: space-between;
+    }
+    
+    .logo {
+        margin-right: 40px;
+    }
+    
+    .site-header__inner {
+        position: fixed;
+        background-color: var(--police-blue);
+        top: 0;
+        right: 0;
+        width: 255px;
+        height: 100vh;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 36px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .open-menu {
+        transform: translateX(0);
+    }
+    
+    .site-header__menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 36px;
+        position: absolute;
+        top: 112px;
+    }
+    
+    .sitenav__list {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 56px;
+        left: 212px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .site-header {
+        padding-top: 48px;
+    }
+    
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 190px;
+    }
+    
+    .hero-bottom-bg {
+        top: 467px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .hero {
+        gap: 18px;
+    }
+    
+    .hero__heading {
+        font-size: 40px;
+        line-height: 40px;
+        max-width: 248px;
+    }
+    
+    .hero__paragraph {
+        font-size: 15px;
+    }
 }
