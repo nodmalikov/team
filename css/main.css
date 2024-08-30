@@ -598,6 +598,18 @@ img {
             }
         }
     }
+    
+    .reviews__item {
+        p {
+            margin-bottom: 16px;
+        }
+        h6 {
+            margin-bottom: 2px;
+        }
+        span {
+            margin-bottom: 16px;
+        }
+    }
 }
 
 @media only screen and (max-width: 500px) {
