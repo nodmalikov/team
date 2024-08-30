@@ -405,6 +405,53 @@ img {
 }
 
 
+/* CONTACT */
+.contact {
+    padding-top: 76px;
+    padding-bottom: 76px;
+    background-color: var(--light-coral);
+    position: relative;
+    z-index: 3;
+}
+
+.contact__container {
+    max-width: 917px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contact__heading {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: var(--sacramento-green);
+    margin: 0;
+}
+
+.contact__button {
+    color: var(--sacramento-green);
+    border-color: var(--sacramento-green);
+    transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.contact__button:hover {
+    background-color: var(--sacramento-green);
+    color: var(--full-white);
+}
+
+.contact__button:active {
+    opacity: 0.8;
+}
+
+.contact__bg {
+    position: absolute;
+    left: -263px;
+    bottom: -176px;
+}
+
+
 /* MEDIA-QUERIES */
 @media only screen and (max-width: 1200px) {
     .hero-bottom-bg {
@@ -497,6 +544,13 @@ img {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .contact__heading {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .reviews {
         padding-top: 100px;
@@ -510,6 +564,24 @@ img {
     
     .reviews__container {
         gap: 48px;
+    }
+    
+    .contact {
+        padding-top: 84px;
+        padding-bottom: 84px;
+        background-image: url("../img/site-bg/home-contact-bg.svg");
+        background-repeat: no-repeat;
+        background-position: left bottom -122px;
+    }
+    
+    .contact__container {
+        justify-content: center;
+        gap: 84px;
+    }
+    
+    .contact__heading {
+        font-size: 32px;
+        line-height: 32px;
     }
 }
 
@@ -565,6 +637,16 @@ img {
         position: absolute;
         top: 56px;
         left: 212px;
+    }
+    
+    .contact__container {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .contact__heading {
+        max-width: 327px;
+        text-align: center;
     }
 }
 
