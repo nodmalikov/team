@@ -452,6 +452,57 @@ img {
 }
 
 
+/* SITE-FOOTER */
+.site-footer {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: var(--dark-green);
+    position: relative;
+    z-index: 3;
+}
+
+.site-footer__container {
+    display: flex;
+}
+
+.site-footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-right: 125px;
+}
+
+.site-footer__about {
+    max-width: 170px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.site-footer__socials {
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: flex-end;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        svg {
+            display: block;
+        }
+    }
+    p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
 /* MEDIA-QUERIES */
 @media only screen and (max-width: 1200px) {
     .hero-bottom-bg {
@@ -551,6 +602,35 @@ img {
     }
 }
 
+@media only screen and (max-width: 950px) {
+    .site-footer {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+    
+    .site-footer__container {
+        justify-content: space-between;
+        flex-wrap: wrap
+    }
+    
+    .site-footer__nav {
+        margin: 0;
+    }
+    
+    .site-footer__socials {
+        margin: 0;
+        width: 950px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+    
+    .site-footer__about {
+        max-width: 260px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .reviews {
         padding-top: 100px;
@@ -647,6 +727,46 @@ img {
     .contact__heading {
         max-width: 327px;
         text-align: center;
+    }
+    
+    .site-footer {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+    
+    .site-footer__container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .site-footer__socials {
+        flex-direction: column;
+        width: 60%;
+        align-items: center;
+        p {
+            text-align: center;
+        }
+    }
+    
+    .site-footer__nav {
+        align-items: center;
+        margin-bottom: 24px;
+        .logo {
+            margin-right: 0;
+        }
+        .sitenav__list {
+            flex-direction: row;
+        }
+    }
+    
+    .site-footer__about {
+        text-align: center;
+        max-width: 180px;
+    }
+    
+    .site-footer__socials {
+        margin-top: 40px;
+        gap: 16px;
     }
 }
 
