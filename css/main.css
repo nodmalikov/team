@@ -539,6 +539,8 @@ img {
     padding-top: 140px;
     padding-bottom: 140px;
     background-color: var(--deep-green);
+    position: relative;
+    z-index: 2;
 }
 
 .directors__container {
@@ -695,6 +697,41 @@ img {
     position: absolute;
     bottom: -140px;
     right: -147px;
+}
+
+
+/* PARTNERS */
+.partners {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-color: var(--sacramento-green);
+}
+
+.partners__container {
+    position: relative;
+}
+
+.partners__heading {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+
+.partners__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 78px;
+}
+
+.partners__bg {
+    position: absolute;
+    top: -185px;
+    left: -152px;
 }
 
 
@@ -862,7 +899,8 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
-    .reviews {
+    .reviews,
+    .partners {
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -898,6 +936,32 @@ img {
         background-image: url("../img/site-bg/home-reviews-bg-right.svg"), url("../img/site-bg/home-reviews-bg-left.svg");
         background-repeat: no-repeat;
         background-position: top left -100px, bottom right 0;
+    }
+    
+    .partners__heading {
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 48px;
+    }
+    
+    .partners__link img {
+        width: 160px;
+        height: 25px;
+        object-fit: contain;
+    }
+    
+    .partners__list {
+        gap: 30px;
+    }
+    
+    .partners__bg {
+        display: none;
+    }
+    
+    .partners {
+        background-image: url("../img/site-bg/home-features-one.svg");
+        background-repeat: no-repeat;
+        background-position: left 0 top -142px;
     }
 }
 
@@ -1030,9 +1094,14 @@ img {
         background-position: top -100px left -100px, bottom right 0;
     }
     
-    .directors {
+    .directors,
+    .partners {
         padding-top: 88px;
         padding-bottom: 88px;
+    }
+    
+    .partners {
+        background-position: left -100px top -142px;
     }
 }
 
