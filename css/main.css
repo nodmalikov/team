@@ -949,6 +949,12 @@ img {
         height: 25px;
         object-fit: contain;
     }
+
+    .partners__link img:last-child {
+        width: 98px;
+        height: 40px;
+        object-fit: contain;
+    }
     
     .partners__list {
         gap: 30px;
